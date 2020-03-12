@@ -1,6 +1,6 @@
 import 'dart:ffi';
 import 'package:ffi/ffi.dart';
-import 'package:tester/SDL2/ffi.dart' show dlib;
+import 'package:SDL_dart/SDL2/ffi.dart' show dlib;
 
 const SDL_HINT_FRAMEBUFFER_ACCELERATION = "SDL_FRAMEBUFFER_ACCELERATION";
 const SDL_HINT_RENDER_DRIVER = "SDL_RENDER_DRIVER";

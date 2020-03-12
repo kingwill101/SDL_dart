@@ -1,8 +1,8 @@
 import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
-import 'package:tester/SDL2/SDLWindow.dart';
-import 'package:tester/SDL2/functions.dart';
+import 'package:SDL_dart/SDL2/SDLWindow.dart';
+import 'package:SDL_dart/SDL2/functions.dart';
 
 import 'ffi.dart' show dlib;
 

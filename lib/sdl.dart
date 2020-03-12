@@ -1,4 +1,4 @@
-import 'package:tester/SDL2/functions.dart';
+import 'package:SDL_dart/SDL2/functions.dart';
 
 import 'SDL2/ffi.dart' show dlib;
 

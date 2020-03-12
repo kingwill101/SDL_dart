@@ -2,13 +2,14 @@ import 'dart:ffi' as ffi;
 import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
-import 'package:tester/SDL2/SDLWindow.dart';
-import 'package:tester/SDL2/event.dart';
-import 'package:tester/SDL2/flags.dart';
-import 'package:tester/SDL2/sdl.dart';
-import 'package:tester/SDL2/version.dart';
-import 'package:tester/SDL2/video.dart';
-import 'package:tester/sdl.dart';
+import 'package:SDL_dart/SDL2/SDLWindow.dart';
+import 'package:SDL_dart/SDL2/event.dart';
+import 'package:SDL_dart/SDL2/flags.dart';
+import 'package:SDL_dart/SDL2/sdl.dart';
+import 'package:SDL_dart/SDL2/version.dart';
+import 'package:SDL_dart/SDL2/video.dart';
+import 'package:SDL_dart/sdl.dart';
+import 'package:SDL_dart/SDL2/event.dart';
 
 void main(List<String> arguments) {
   ffi.Pointer<SDL_Window> win = ffi.nullptr;
@@ -31,20 +32,18 @@ void main(List<String> arguments) {
 
   Pointer<SDL_Event> _event = allocate();
   while (true) {
-    try {
-      int _val = SDL_PollEvent(_event);
-    } catch (er) {
-      print(er);
-    }
+    SDL_PollEvent(_event);
 
     try {
-      //       if (_event.ref.type == SDL_QUIT) {
-//         print("quit");
-////         SDL_DestroyWindow(win);
-////         SDL_Quit();
-//       }
-    } catch (er) {
-      print(er);
+      print(_event);
+    } catch (err) {
+      print(err);
+    }
+
+    if (_event.ref.type == SDL_QUIT) {
+      print("quit");
+      SDL_DestroyWindow(win);
+      SDL_Quit();
     }
 
     SDL_FillRect(surface, ffi.nullptr,
