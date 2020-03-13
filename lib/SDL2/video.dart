@@ -113,7 +113,7 @@ typedef _SDL_CreateTexture_c = Pointer<SDL_Texture> Function(
 typedef _SDL_CreateTexture_Dart = Pointer<SDL_Texture> Function(
     Pointer<SDL_Renderer>, int format, int access, int w, int h);
 
-final _SDL_CreateTexture =
+final SDL_CreateTexture =
     dlib.lookupFunction<_SDL_CreateTexture_c, _SDL_CreateTexture_Dart>(
         '_SDL_CreateTexture');
 
@@ -123,7 +123,7 @@ typedef _SDL_CreateWindow_c = Pointer<SDL_Window> Function(
 typedef _SDL_CreateWindow_Dart = Pointer<SDL_Window> Function(
     Pointer<Utf8> title, int x, int y, int w, int h, int flags);
 
-final _SDL_CreateWindow =
+final SDL_CreateWindow =
     dlib.lookupFunction<_SDL_CreateWindow_c, _SDL_CreateWindow_Dart>(
         '_SDL_CreateWindow');
 
@@ -133,7 +133,7 @@ typedef _SDL_CreateWindowAndRenderer_c = Uint32 Function(Uint32, Uint32, Uint32,
 typedef _SDL_CreateWindowAndRenderer_Dart = int Function(int, int, int,
     Pointer<Pointer<SDL_Window>>, Pointer<Pointer<SDL_Renderer>>);
 
-final _SDL_CreateWindowAndRenderer = dlib.lookupFunction<
+final SDL_CreateWindowAndRenderer = dlib.lookupFunction<
     _SDL_CreateWindowAndRenderer_c,
     _SDL_CreateWindowAndRenderer_Dart>('_SDL_CreateWindowAndRenderer');
 
@@ -150,7 +150,7 @@ typedef _SDL_CreateWindowFrom_c = Pointer<SDL_Window> Function(Pointer<Utf8>);
 typedef _SDL_CreateWindowFrom_Dart = Pointer<SDL_Window> Function(
     Pointer<Utf8>);
 
-final _SDL_CreateWindowFrom =
+final SDL_CreateWindowFrom =
     dlib.lookupFunction<_SDL_CreateWindowFrom_c, _SDL_CreateWindowFrom_Dart>(
         '_SDL_CreateWindowFrom');
 
