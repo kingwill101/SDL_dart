@@ -31,8 +31,6 @@ class SDL_MultiGestureEvent extends Struct{}
 class SDL_DollarGestureEvent extends Struct{}
 class SDL_DropEvent extends Struct{}
 
-
-
 class SDL_Event extends Struct {
   @Uint32()
   int type;
@@ -69,5 +67,5 @@ typedef SDL_PollEvent_c = Int32 Function(Pointer<SDL_Event>);
 typedef SDL_PollEvent_Dart = int Function(Pointer<SDL_Event>);
 
 final SDL_PollEvent = dlib.lookupFunction<SDL_PollEvent_c, SDL_PollEvent_Dart>(
-    "SDL_PollEvent");
+    'SDL_PollEvent');
 

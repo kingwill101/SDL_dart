@@ -2,7 +2,7 @@ name: SDL_dart
 description: ffi wrapper for SDL2
 
 environment:
-  sdk: '>=2.7.0 <3.0.0'
+  sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
   path: ^1.6.0

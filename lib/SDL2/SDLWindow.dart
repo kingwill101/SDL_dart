@@ -1,5 +1,6 @@
 import 'dart:ffi';
 import 'package:ffi/ffi.dart';
+import '../sdl.dart';
 
 enum SDL_BOOL { SDL_TRUE, SDL_FALSE }
 
@@ -125,16 +126,6 @@ class SDL_Rect extends Struct {
 class SDL_WindowShaper extends Struct {}
 
 class SDL_WindowUserData extends Struct {}
-
-class SDL_DisplayMode extends Struct {
-  @Int32()
-  int w;
-  @Int32()
-  int h;
-  @Int32()
-  int refresh_rate;
-  Pointer driverdata;
-}
 
 class SDL_Window extends Struct {
   Pointer<Void> magic;
