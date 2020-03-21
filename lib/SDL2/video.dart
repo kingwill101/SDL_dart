@@ -201,8 +201,8 @@ typedef _SDL_GetDisplayBounds_dart = int Function(
     int displayIndex, Pointer<SDL_Rect> rect);
 
 final SDL_GetDisplayBounds =
-dlib.lookupFunction<_SDL_GetDisplayBounds_c, _SDL_GetDisplayBounds_dart>(
-    'SDL_GetDisplayBounds');
+    dlib.lookupFunction<_SDL_GetDisplayBounds_c, _SDL_GetDisplayBounds_dart>(
+        'SDL_GetDisplayBounds');
 //int SDLCALL SDL_GetDisplayMode(int displayIndex, int modeIndex,SDL_DisplayMode * mode);
 typedef _SDL_GetDispslayMode_c = Int32 Function(
     Int32 displayIndex, Int32 modeIndex, Pointer<SDL_DisplayMode> mode);
@@ -210,16 +210,16 @@ typedef _SDL_GetDispslayMode_dart = int Function(
     int displayIndex, int modeIndex, Pointer<SDL_DisplayMode> mode);
 
 final SDL_GetDisplayMode =
-dlib.lookupFunction<_SDL_GetDispslayMode_c, _SDL_GetDispslayMode_dart>(
-    'SDL_GetDisplayMode');
+    dlib.lookupFunction<_SDL_GetDispslayMode_c, _SDL_GetDispslayMode_dart>(
+        'SDL_GetDisplayMode');
 
 //const char* SDL_GetDisplayName(int displayIndex)
 typedef _SDL_GetDisplayName_c = Pointer<Utf8> Function(Int32);
 typedef _SDL_GetDisplayName_dart = Pointer<Utf8> Function(int);
 
 final SDL_GetDisplayName =
-dlib.lookupFunction<_SDL_GetDisplayName_c, _SDL_GetDisplayName_dart>(
-    'SDL_GetDisplayName');
+    dlib.lookupFunction<_SDL_GetDisplayName_c, _SDL_GetDisplayName_dart>(
+        'SDL_GetDisplayName');
 
 //int SDLCALL SDL_GetDisplayUsableBounds(int displayIndex, SDL_Rect * rect);
 
@@ -238,8 +238,8 @@ typedef _SDL_GetGrabbedWindow_c = Pointer<SDL_Window> Function();
 typedef _SDL_GetGrabbedWindow_dart = Pointer<SDL_Window> Function();
 
 final SDL_GetGrabbedWindow =
-dlib.lookupFunction<_SDL_GetGrabbedWindow_c, _SDL_GetGrabbedWindow_dart>(
-    'SDL_GetGrabbedWindow');
+    dlib.lookupFunction<_SDL_GetGrabbedWindow_c, _SDL_GetGrabbedWindow_dart>(
+        'SDL_GetGrabbedWindow');
 
 //int SDL_GetNumVideoDisplays(void)
 typedef _SDL_GetNumVideoDisplays_c = Int32 Function();
@@ -668,22 +668,21 @@ final SDL_ShowSimpleMessageBox = dlib.lookupFunction<
 
 //int SDL_ShowMessageBox(const SDL_MessageBoxData* messageboxdata,int*   buttonid)
 
-typedef _SDL_ShowMessageBox_c = Int32 Function(Pointer<
-    SDL_MessageBoxData>messageboxdata, Pointer<Int32>);
-typedef _SDL_ShowMessageBox_dart = int Function(Pointer<
-    SDL_MessageBoxData>messageboxdata, Pointer<Int32>);
+typedef _SDL_ShowMessageBox_c = Int32 Function(
+    Pointer<SDL_MessageBoxData> messageboxdata, Pointer<Int32>);
+typedef _SDL_ShowMessageBox_dart = int Function(
+    Pointer<SDL_MessageBoxData> messageboxdata, Pointer<Int32>);
 
-final SDL_ShowMessageBox = dlib.lookupFunction<
-    _SDL_ShowMessageBox_c,
-    _SDL_ShowMessageBox_dart>('SDL_ShowMessageBox');
+final SDL_ShowMessageBox =
+dlib.lookupFunction<_SDL_ShowMessageBox_c, _SDL_ShowMessageBox_dart>(
+    'SDL_ShowMessageBox');
 
 //void SDL_VideoQuit(void)
 typedef _SDL_VideoQuit_c = Int32 Function();
 typedef _SDL_VideoQuit_dart = int Function();
 
-final SDL_VideoQuit = dlib.lookupFunction<
-    _SDL_VideoQuit_c,
-    _SDL_VideoQuit_dart>('SDL_VideoQuit');
+final SDL_VideoQuit =
+dlib.lookupFunction<_SDL_VideoQuit_c, _SDL_VideoQuit_dart>('SDL_VideoQuit');
 
 //int SDL_UpdateWindowSurface(SDL_Window * window);
 typedef _SDL_UpdateWindowSurface_c = Uint32 Function(Pointer<SDL_Window>);
@@ -694,11 +693,18 @@ final SDL_UpdateWindowSurface = dlib.lookupFunction<_SDL_UpdateWindowSurface_c,
     _SDL_UpdateWindowSurface_Dart>('SDL_UpdateWindowSurface');
 
 //int SDL_UpdateWindowSurfaceRectsRects(SDL_Window* window,const SDL_Rect*   rects,int   numrects
-typedef _SDL_UpdateWindowSurfaceRects_c = Uint32 Function(Pointer<
-    SDL_Window>, Pointer<SDL_Rect> rects, Int32 numrecets);
+typedef _SDL_UpdateWindowSurfaceRects_c = Uint32 Function(
+    Pointer<SDL_Window>, Pointer<SDL_Rect> rects, Int32 numrecets);
 typedef _SDL_UpdateWindowSurfaceRects_Dart = int Function(
     Pointer<SDL_Window> window, Pointer<SDL_Rect> rects, int numrecets);
 
 final SDL_UpdateWindowSurfaceRects = dlib.lookupFunction<
     _SDL_UpdateWindowSurfaceRects_c,
     _SDL_UpdateWindowSurfaceRects_Dart>('SDL_UpdateWindowSurfaceRects');
+
+//int SDL_VideoInit(const char* driver_name)
+typedef _SDL_VideoInit_c = Uint32 Function(Pointer<Utf8> driver_name);
+typedef _SDL_VideoInit_Dart = int Function(Pointer<Utf8> driver_name);
+
+final SDL_VideoInit =
+dlib.lookupFunction<_SDL_VideoInit_c, _SDL_VideoInit_Dart>('SDL_VideoInit');
